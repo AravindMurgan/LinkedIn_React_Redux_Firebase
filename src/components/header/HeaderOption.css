@@ -4,5 +4,22 @@
     align-items: center;
     color: rgba(128, 128, 128, 0.76);
     cursor: pointer;
+    margin-right: 2rem;
     
+}
+
+.headerOption:hover{
+    color: #111;
+}
+
+.headerOption_title{
+    font-size: 12px;
+    font-weight: light;
+}
+
+.headerOption_icon{
+
+    object-fit: contain;
+    height: 25px !important ;
+    width: 25px !important;
 }

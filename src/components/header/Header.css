@@ -1,9 +1,22 @@
 .header{
+    position: sticky;
+    top: 0;
     display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
+    
+}
+
+.search_input{
+    margin-left: 3px;
 }
 
 .header__left{
     display: flex;
+    
 }
 
 
@@ -25,9 +38,15 @@
 
 }
 
+
+
 .header__search > input{
     border: none;
     outline: none;
     background: none;
    
+}
+
+.header__right{
+    display: flex;
 }

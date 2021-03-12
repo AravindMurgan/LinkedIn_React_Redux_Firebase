@@ -1,18 +1,16 @@
 import React from 'react';
 import './HeaderOption.css';
+import {Avatar} from '@material-ui/core';
 
-  
-const HeaderOption = ({title,Icon}) => {
-    return (
-        <div className='headerOption' >
+const HeaderOption = ({ avatar, title, Icon }) => {
+	return (
+		<div className='headerOption'>
+			{Icon && <Icon className='headerOption_icon' />}
 
-            
-            {Icon &&  <Icon className='headerOption_icon' />}
-            <h3 className='headerOption_title' > {title} </h3>
-            
-        </div>
-    )
-}
+			{avatar && <Avatar className='headerOption_icon' src={avatar} />}
+			<h3 className='headerOption_title'> {title} </h3>
+		</div>
+	);
+};
 
-export default HeaderOption
- 
+export default HeaderOption;
