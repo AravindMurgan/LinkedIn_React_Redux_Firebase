@@ -62,3 +62,46 @@
 
 }
 
+.sidebar__top > h4 {
+    font-size: 13px;
+    color: gray;
+}
+
+.sidebar__top > h2{
+    font-size: 18px;
+
+}
+
+.sidebar__bottom {
+    text-align: left;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    border:1px solid lightgray;
+    border-radius: 10px;
+
+}
+
+.sidebar__recentitem{
+    display: flex;
+    color: gray;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    transition: 0.5s;
+
+
+}
+
+.sidebar__recentitem:hover{
+    background-color: whitesmoke;
+    color: #111;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.sidebar__hash{
+    margin-right: 10px;
+    margin-left: 5px;
+}
