@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+}
+
+.header__left{
+    display: flex;
+}
+
+
+
+.header__left > img {
+    object-fit: contain;
+    height: 40px;
+}
+
+.header__search{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.header__right{
+    display: flex;
+    align-items: center;
+    
+}
+
+.header__right > p{
+    margin: 5px;
+}

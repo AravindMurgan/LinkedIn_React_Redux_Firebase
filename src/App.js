@@ -1,17 +1,20 @@
 import React from 'react';
 import './App.css';
+import Header from './components/header/Header';
+import HeaderCss from './components/header/Header.css';
 
 function App() {
 	return (
 		<div className='app'>
-			<h1>LinkedIn </h1> 
+		
 
-      {/* Header */}
+			{/* Header */}
+			<Header />
 
-      {/* App Body */}
-      {/* Sidebar */}
-      {/* widgets */}
-      {/* Feeds */}
+			{/* App Body */}
+			{/* Sidebar */}
+			{/* widgets */}
+			{/* Feeds */}
 		</div>
 	);
 }
