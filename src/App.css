@@ -1,4 +1,4 @@
-* {
+/* * {
 	margin: 0;
 	padding: 0;
 }
@@ -41,4 +41,20 @@
 	100% {
 		transform: translateY(0px);
 	}
+} */
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.app__body{
+	display: flex;
+}
+
+.app{
+	background-color: #f3f2ef;
+	display: flex;
+	flex-direction: column;
 }
