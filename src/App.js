@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
-import HeaderCss from './components/header/Header.css';
 
 function App() {
 	return (
 		<div className='app'>
-		
-
 			{/* Header */}
 			<Header />
 
