@@ -19,6 +19,7 @@ function App() {
 				<Feeds />
 				{/* widgets */}
 			</div>
+			
 		</div>
 	);
 }
