@@ -6,6 +6,7 @@ import SubscriptionsIcons from '@material-ui/icons/Subscriptions';
 import React from 'react';
 import './Feeds.css';
 import InputOptions from './InputOptions/InputOption';
+import Posts from './Posts/Posts';
 
 const Feeds = () => {
 	return (
@@ -18,22 +19,29 @@ const Feeds = () => {
 						<button type='submit'>Send</button>
 					</form>
 				</div>
+				<div className='feed__inputoptions'>
+					<InputOptions Icon={ImageIcon} title='Photo' color='#70B5F9' />
+					<InputOptions
+						Icon={SubscriptionsIcons}
+						title='Video'
+						color='#E7A33E'
+					/>
+					<InputOptions Icon={EventNoteIcon} title='Event' color='#C0CBCD' />
+					<InputOptions
+						Icon={calendarViewDayIcon}
+						title='Write article'
+						color='37FC15E'
+					/>
+				</div>
 			</div>
 
-			<div className='feed__inputoptions'>
-				<InputOptions Icon={ImageIcon} title='Photo' color='#70B5F9' />
-				<InputOptions Icon={SubscriptionsIcons} title='Video' color='#E7A33E' />
-				<InputOptions Icon={EventNoteIcon} title='Event' color='#C0CBCD' />
-				<InputOptions
-					Icon={calendarViewDayIcon}
-					title='Write article'
-					color='37FC15E'
-				/>
-			</div>
+			<Posts
+				name='Aravind Murugan'
+				description='test description'
+				message='this is a test message'
+				photoUrl=''
+			/>
 		</div>
-
-        // Posts
-        
 	);
 };
 
