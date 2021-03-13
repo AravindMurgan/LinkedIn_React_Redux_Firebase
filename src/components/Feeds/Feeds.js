@@ -1,9 +1,18 @@
+import CreateIcon from '@material-ui/icons/Create';
 import React from 'react';
-import './Feeds.css'
-;
+import './Feeds.css';
 const Feeds = () => {
     return (
-        <div>
+        <div className='feed' >
+            <div className="feed__inputcontainer">
+                <CreateIcon />
+                <div className="feed__input">
+                    <form action="">
+                        <input type="text"/>
+                        <button type='submit' >Send</button>
+                    </form>
+                </div>
+            </div>
             
         </div>
     )
