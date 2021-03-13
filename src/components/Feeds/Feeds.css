@@ -8,7 +8,7 @@
 .feed__inputcontainer {
     display: flex;
     justify-content: space-evenly;
-    margin: 0 10px;
+    margin: 10px;
 }
 
 .feed__input{
@@ -38,4 +38,9 @@
 
 .feed__input > form > button{
     display:none;
+}
+
+.feed__inputoptions{
+    display: flex;
+    justify-content: space-evenly;
 }
