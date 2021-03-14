@@ -20,7 +20,7 @@ const Sidebar = () => {
 
 				<Avatar className='sidebar__avatar' />
 
-				<h1>Aravind Murugan </h1>
+				<h2>Aravind Murugan </h2>
 				<h4>UI Developer @Microsoft </h4>
 			</div>
 			<div className='sidebar__stats'>
