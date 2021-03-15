@@ -5,30 +5,46 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
 import SuperVisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../features/userSlice';
 import linkedinIcon from '../../icons/linkedin.svg';
+import { auth } from '../Firebase/Firebase';
 import './Header.css';
 import HeaderOptions from './HeaderOption';
 
-
 function Header() {
+
+	const dispatch = useDispatch();
+
+	const logoutofApp = ()=>{
+		dispatch(
+			logout()
+		);
+		auth.signOut();
+	}
+
 	return (
 		<div className='header'>
 			<div className='header__left'>
 				<img src={linkedinIcon} alt='' />
 
 				<div className='header__search'>
-					<SearchIcon  />
-					<input type='text' placeholder='Search'className='search_input' />
+					<SearchIcon />
+					<input type='text' placeholder='Search' className='search_input' />
 				</div>
 			</div>
 
 			<div className='header__right'>
-				<HeaderOptions Icon={Home}  title='Home' />
-				<HeaderOptions Icon={SuperVisorAccountIcon} title='Network'  />
-				<HeaderOptions Icon={BusinessCenterIcon} title='Jobs'  />
-				<HeaderOptions Icon={ChatIcon} title='Messaging'  />
-				<HeaderOptions Icon={NotificationsIcon} title='Notifications'  />
-				<HeaderOptions avatar='https://media-exp1.licdn.com/dms/image/C5635AQFpJE8CnvwVXA/profile-framedphoto-shrink_100_100/0/1610194948440?e=1615626000&v=beta&t=VVAFvsdg1Jlg7zez7nhnPczELZgSjXdZkx5s7XebMz4' title='Me' />
+				<HeaderOptions Icon={Home} title='Home' />
+				<HeaderOptions Icon={SuperVisorAccountIcon} title='Network' />
+				<HeaderOptions Icon={BusinessCenterIcon} title='Jobs' />
+				<HeaderOptions Icon={ChatIcon} title='Messaging' />
+				<HeaderOptions Icon={NotificationsIcon} title='Notifications' />
+				<HeaderOptions
+					avatar='https://media-exp1.licdn.com/dms/image/C5635AQFpJE8CnvwVXA/profile-framedphoto-shrink_100_100/0/1610194948440?e=1615626000&v=beta&t=VVAFvsdg1Jlg7zez7nhnPczELZgSjXdZkx5s7XebMz4'
+					title='Me'
+					onClick={logoutofApp}
+				/>
 			</div>
 		</div>
 	);
