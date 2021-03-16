@@ -32,6 +32,8 @@ function App() {
 				dispatch(logout());
 			}
 		});
+
+		// eslint-disable-next-line
 	}, []);
 
 	return (

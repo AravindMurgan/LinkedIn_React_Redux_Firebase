@@ -3,7 +3,7 @@
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	
 }
 
 .app__body{
@@ -13,17 +13,13 @@
 	margin-left: 20px;
 	margin-right: 20px;
 
+
 }
 
 .app{
 	background-color: #f3f2ef;
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 }
 
-/* .app__body{
-	margin-top: 35px;
-	max-width: 1200px;
-	margin-left: 20px;
-	margin-right: 20px;
-} */
