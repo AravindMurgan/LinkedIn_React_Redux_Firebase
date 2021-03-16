@@ -5,6 +5,7 @@ import ImageIcon from '@material-ui/icons/Image';
 import SubscriptionsIcons from '@material-ui/icons/Subscriptions';
 import firebase from 'firebase';
 import React, { useEffect, useState } from 'react';
+import FlipMove from 'react-flip-move';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
 import { db } from '../Firebase/Firebase';
@@ -35,10 +36,8 @@ const Feeds = () => {
 	const sendPost = (e) => {
 		e.preventDefault();
 
-		
-
 		db.collection('posts').add({
-			name:user.displayName,
+			name: user.displayName,
 			description: user.email,
 			message: input,
 			photoUrl: user.photoUrl || '',
@@ -80,15 +79,18 @@ const Feeds = () => {
 				</div>
 			</div>
 
-			{posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-				<Posts
-					key={id}
-					name={name}
-					description={description}
-					message={message}
-					photoUrl={photoUrl}
-				/>
-			))}
+			{/* Posts */}
+			<FlipMove>
+				{posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+					<Posts
+						key={id}
+						name={name}
+						description={description}
+						message={message}
+						photoUrl={photoUrl}
+					/>
+				))}
+			</FlipMove>
 		</div>
 	);
 };

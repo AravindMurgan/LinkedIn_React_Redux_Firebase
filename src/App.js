@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import Feeds from './components/Feeds/Feeds';
+import Widgets from './components/Feeds/Widgets/Widgets';
 import { auth } from './components/Firebase/Firebase';
 import Header from './components/header/Header';
 import Login from './components/Login&Signup/Login';
@@ -13,25 +14,25 @@ function App() {
 
 	const dispatch = useDispatch();
 
-	useEffect(()=>{
-		auth.onAuthStateChanged((userAuth)=>{
+	useEffect(() => {
+		auth.onAuthStateChanged((userAuth) => {
 			console.log(userAuth);
-			if(userAuth){
+			if (userAuth) {
 				//user logged in//
-				dispatch(login({
-					email:userAuth.email,
-					uid:userAuth.uid,
-					displayName: userAuth.displayName,
-					photoUrl:userAuth.photoURL,
-				}))
-
-			}else{
+				dispatch(
+					login({
+						email: userAuth.email,
+						uid: userAuth.uid,
+						displayName: userAuth.displayName,
+						photoUrl: userAuth.photoURL,
+					})
+				);
+			} else {
 				//user logged out//
-				dispatch(logout())
+				dispatch(logout());
 			}
-		})
-	},[])
-	
+		});
+	}, []);
 
 	return (
 		<div className='app'>
@@ -39,7 +40,6 @@ function App() {
 			<Header />
 
 			{!user ? (
-				
 				//Login///
 				<Login />
 			) : (
@@ -50,6 +50,7 @@ function App() {
 					{/* Feeds */}
 					<Feeds />
 					{/* widgets */}
+					<Widgets />
 				</div>
 			)}
 		</div>

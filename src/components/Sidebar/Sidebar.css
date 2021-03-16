@@ -5,7 +5,8 @@
 
 .sidebar{
     position: sticky;
-    top: 0;
+    top: 80px;
+    height: fit-content;
     flex: 0.2;
     text-align: center;
   
