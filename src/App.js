@@ -17,7 +17,7 @@ function App() {
 		auth.onAuthStateChanged((userAuth)=>{
 			console.log(userAuth);
 			if(userAuth){
-				//user signed in//
+				//user logged in//
 				dispatch(login({
 					email:userAuth.email,
 					uid:userAuth.uid,

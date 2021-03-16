@@ -5,6 +5,8 @@ import ImageIcon from '@material-ui/icons/Image';
 import SubscriptionsIcons from '@material-ui/icons/Subscriptions';
 import firebase from 'firebase';
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/userSlice';
 import { db } from '../Firebase/Firebase';
 import './Feeds.css';
 import InputOptions from './InputOptions/InputOption';
@@ -28,14 +30,18 @@ const Feeds = () => {
 			);
 	}, []);
 
+	const user = useSelector(selectUser);
+
 	const sendPost = (e) => {
 		e.preventDefault();
 
+		
+
 		db.collection('posts').add({
-			name: 'Aravind Murugan',
-			description: 'this is a test',
+			name:user.displayName,
+			description: user.email,
 			message: input,
-			photoUrl: '',
+			photoUrl: user.photoUrl || '',
 			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
 		});
 

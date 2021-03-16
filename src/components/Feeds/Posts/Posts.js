@@ -1,21 +1,18 @@
 import { Avatar } from '@material-ui/core';
+import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
+import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
+import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
+import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import React from 'react';
 import InputOption from '../InputOptions/InputOption';
 import './Posts.css';
-import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
-import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
-import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
-import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 
-const Posts = ({ name, description, photoUrl, message }) => {
-
-	
-
+const Posts = ({ name, description, photoUrl, message,email }) => {
 	return (
 		<div>
 			<div className='post'>
 				<div className='post__header'>
-					<Avatar />
+					<Avatar src={photoUrl}> {description[0]} </Avatar>
 					<div className='post__info'>
 						<h3> {name} </h3>
 						<p> {description} </p>

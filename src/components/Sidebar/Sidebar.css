@@ -1,6 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+
 .sidebar{
     position: sticky;
-    top: 80;
+    top: 0;
     flex: 0.2;
     text-align: center;
   
@@ -13,6 +17,8 @@
 }
 
 .sidebar__top{
+    position: sticky;
+    top: 80;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -13,15 +13,12 @@ import './Header.css';
 import HeaderOptions from './HeaderOption';
 
 function Header() {
-
 	const dispatch = useDispatch();
 
-	const logoutofApp = ()=>{
-		dispatch(
-			logout()
-		);
+	const logoutofApp = () => {
+		dispatch(logout());
 		auth.signOut();
-	}
+	};
 
 	return (
 		<div className='header'>
@@ -40,11 +37,7 @@ function Header() {
 				<HeaderOptions Icon={BusinessCenterIcon} title='Jobs' />
 				<HeaderOptions Icon={ChatIcon} title='Messaging' />
 				<HeaderOptions Icon={NotificationsIcon} title='Notifications' />
-				<HeaderOptions
-					avatar='https://media-exp1.licdn.com/dms/image/C5635AQFpJE8CnvwVXA/profile-framedphoto-shrink_100_100/0/1610194948440?e=1615626000&v=beta&t=VVAFvsdg1Jlg7zez7nhnPczELZgSjXdZkx5s7XebMz4'
-					title='Me'
-					onClick={logoutofApp}
-				/>
+				<HeaderOptions  avatar='true' title='Me' onClick={logoutofApp} />
 			</div>
 		</div>
 	);
